@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html >
+<head>
+    <link rel="stylesheet" href="art2img.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous" />
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    
+</head>
+<body>
+    <div class="bg-container column" id="section1InTRo">
+            <div class="d-flex flex-row">
+                    <div class="pt-5 p-5 mt-5">
+                                <h1 class="h1 p-5"> 
+                                    Audio2Img:<br class="mt-4"/> Transforming 
+                                    Sound into Visual <br class="pt-4"> 
+                                    Masterpieces with AI 
+                                </h1>
+                                <p class="mt-3 pt-3 pr-5 pl-5 p">
+                                    Turn your favorite music, podcasts, or soundscapes into stunning visual art.
+Our AI model analyzes the frequencies, rhythms, and textures of audio,
+translating them into vibrant visual masterpieces.
+                                </p>
+                                <div>
+                                    <button class="btn btn-primary mt-3 ml-5" onclick="startServer()">Start Server</button>
+<a class="btn btn-primary mt-3 ml-5" href="http://127.0.0.1:7860" target="_blank">Try now</a>
+                                </div>
+                    </div>
+                    <div class="ml-auto ">
+                        <img src="https://res.cloudinary.com/dkzzrdpgu/image/upload/v1739339750/Screenshot_2025-02-12_112043_kr5mg8.png" class="image"/>
+                    </div>
+            </div>
+    </div>
+
+    <div class="bg-container column">
+        <div>
+            <div class="pt-5">
+                <h1 class="h1 mt-5 p-5">Explore the Technology Behind Audio2Img:
+                    How AI Creates Art from Audio</h1>
+                    <div class="d-flex flex-row">
+                        <div>
+                            <p class="mt-3 pt-3 pr-5 pl-5 p">
+                                Audio2Img uses a neural network to analyze the frequency
+components of sound, identifying specific frequencies and their
+intensities. This data is then used to determine the colors and
+shapes of the generated image
+                            </p>
+                            
+                        </div>
+                        <div>
+                            <p class="mt-3 pt-3 pr-5 pl-5 p">
+                                he model analyzes the rhythm and tempo of the audio, using
+this information to create dynamic movement and patterns
+within the image. This can be seen as a form of visual translation
+of the sonic rhythm.
+                            </p>
+                            
+                        </div>
+                    </div>
+    
+            </div>
+
+        </div>
+        
+
+
+        </div>
+</div>
+    
+
+<script>
+function startServer() {
+    fetch('http://127.0.0.1:5000/start-server')
+    .then(response => response.json())
+    .then(data => alert(data.message || data.error))
+    .catch(error => alert('Error starting server: ' + error));
+}
+</script>
+    <script type="text/javascript" src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-static-website/js/ccbp-ui-kit.js"></script>
+</body>
+</html>
